@@ -6,7 +6,11 @@
 
 .container-main{
     width: 940px;
-    margin: 10px auto;  
+    margin: 10px auto; 
+    
+    @media screen and (max-width: 976px) {
+        width: 90%;
+    }
 }
 
 .img-holder{

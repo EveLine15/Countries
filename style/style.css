@@ -8,6 +8,11 @@
   width: 940px;
   margin: 10px auto;
 }
+@media screen and (max-width: 976px) {
+  .container-main {
+    width: 90%;
+  }
+}
 
 .img-holder {
   width: 100%;
