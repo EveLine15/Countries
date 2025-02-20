@@ -4,6 +4,7 @@ const getData = () => {
     fetch('https://restcountries.com/v3.1/all')
     .then((response) =>  response.json())
     .then((dataArr) => renderData(dataArr))
+    .catch(errorMessage)
 }
 
 const renderData = (dataArr) => {
@@ -33,6 +34,10 @@ const convertPopulation = (population) => {
   if(population < 100) return population;
   else if(population < 100000) return ((population / 10000).toFixed(1))+' тыс';
   else return ((population / 1000000).toFixed(1))+' млн';
+}
+
+function errorMessage(){
+  cardHolder.innerHTML = `<p>Error</p>`
 }
 
 getData();
